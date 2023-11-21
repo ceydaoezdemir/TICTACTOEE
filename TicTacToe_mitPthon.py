@@ -1,10 +1,15 @@
 # Die Main Funktion
 def main():
-    intro()
-    board = erstelle_spielfeld()
-    gebe_spielfeld_aus(board)
-    symbol_1, symbol_2 = sym()
-    voll(board, symbol_1, symbol_2)
+   while True:
+        intro()
+        board = erstelle_spielfeld()
+        gebe_spielfeld_aus(board)
+        symbol_1, symbol_2 = sym()
+        voll(board, symbol_1, symbol_2)
+
+        if not neues_spiel():
+            print("Vielen Dank fürs Spielen. Auf Wiedersehen!")
+            break
 
 
 # Die Print Funktion- Willkommen zum Spiel
@@ -136,6 +141,11 @@ def check_line(symbol_1, symbol_2, line):
 # print Funkion
 def illegal():
     print("Ist schon befüllt. Wähle ein neues Feld")
+
+def neues_spiel():
+    antwort = input("Möchten Sie ein neues Spiel starten? (ja/nein): ")
+    fehler eingeschlichen 
+    return antwort.lower() == 'ja'
 
 
 main()
