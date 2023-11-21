@@ -144,7 +144,7 @@ def illegal():
 
 def neues_spiel():
     antwort = input("Möchten Sie ein neues Spiel starten? (ja/nein): ")
-    üeberarbeiten  
+   
     return antwort.lower() == 'ja'
 
 
